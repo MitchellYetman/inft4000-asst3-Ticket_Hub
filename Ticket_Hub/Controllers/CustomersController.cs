@@ -20,6 +20,12 @@ namespace Ticket_Hub.Controllers
             _configuration = configuration;
         }
 
+        [HttpGet]
+        public IActionResult Get()
+        {
+            return Ok("Hello from customers controller");
+        }
+
         [HttpPost]
         public async Task<IActionResult> SendCustomerDataToAzureAsync (Purchase purchaseRequest)
         {
