@@ -49,7 +49,7 @@ namespace Ticket_Hub.Controllers
             var plainTextBytes = Encoding.UTF8.GetBytes(message);
             await queueClient.SendMessageAsync(Convert.ToBase64String(plainTextBytes));
 
-            return Ok("Purchase for " + purchaseRequest.name + " successfully posted to Azure");
+            return Ok("Purchase for " + purchaseRequest.Name + " successfully posted to Azure");
 
         }
     }
