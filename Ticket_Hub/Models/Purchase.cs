@@ -5,7 +5,7 @@ namespace Ticket_Hub.Models
     public class Purchase
     {
         [Required]
-        public int ConcertId;
+        public int ConcertId { get; set; }
 
         [Required]
         [EmailAddress]
