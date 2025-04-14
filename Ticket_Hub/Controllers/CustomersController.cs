@@ -27,11 +27,11 @@ namespace Ticket_Hub.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> SendCustomerDataToAzureAsync (Purchase purchaseRequest)
+        public async Task<IActionResult> SendCustomerDataToAzureAsync([FromBody] Purchase purchaseRequest)
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest();
+                return BadRequest("Model state not valid");
             }
 
             string queueName = "tickethub";
